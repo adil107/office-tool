@@ -1,0 +1,55 @@
+@use "style/_colors.scss" as c;
+
+.container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .radioLabel {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: c.$darkblue;
+    cursor: pointer;
+  }
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    &:checked ~ .checkMark::after {
+      display: block;
+    }
+  }
+
+  .checkMark {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background: #e5e7e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::after {
+      content: "";
+      position: absolute;
+      display: none;
+      width: 8px;
+      height: 8px;
+      background-color: c.$blue;
+      border-radius: 50%;
+    }
+  }
+}

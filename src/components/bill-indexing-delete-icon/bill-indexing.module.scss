@@ -1,0 +1,129 @@
+@use "style/_colors.scss" as c;
+
+.wrapper {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: visible !important;
+  padding: 0;
+  .cardHeader {
+    padding: 7px 15px 0;
+    height: 66px;
+    min-width: 1292px;
+    display: flex;
+    position: relative;
+    background: #d8dadd;
+    .headerContent {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding: 0 15px;
+      flex: 1;
+      border-right: 1px solid c.$lightgray;
+
+      &:nth-of-type(1) {
+        padding-left: 0px;
+        border-right: 1px solid transparent;
+      }
+      &:nth-last-of-type(1) {
+        padding-right: 0px;
+        border-right: 1px solid transparent;
+      }
+
+      .p {
+        width: 100%;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: c.$gray;
+      }
+    }
+  }
+
+  .cardBody {
+    padding: 0px 15px;
+    min-width: 1292px;
+    display: flex;
+    position: relative;
+    > .bodyContent {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      padding: 10px 15px;
+      border-right: 1px solid c.$lightgray;
+
+      &:nth-of-type(1) {
+        padding-left: 0px;
+        border-right: 1px solid transparent;
+      }
+      &:nth-last-of-type(1) {
+        padding-right: 0px;
+        border-right: 1px solid transparent;
+      }
+
+      .p {
+        width: 100%;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 27px;
+        color: c.$darkblue;
+      }
+    }
+  }
+}
+
+.dropdownWrapperDiv {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  z-index: 100;
+}
+
+.eurSelectDiv {
+  width: 67px !important;
+  .inputClass {
+    background: white;
+    padding: 12px 15px 12px 10px;
+    border: none;
+    height: 42px;
+    & p {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px !important;
+      line-height: 140%;
+    }
+    & img {
+      width: 20px;
+      height: 20px;
+    }
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+
+  .optionStyle {
+    padding: 0px 10px 10px;
+    margin-top: 1px;
+
+    div {
+      justify-content: center !important;
+      p {
+        font-size: 12px;
+      }
+    }
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+  }
+  div {
+    & p {
+      min-width: 26px !important;
+    }
+  }
+}

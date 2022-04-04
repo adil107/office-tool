@@ -1,0 +1,70 @@
+@use "style/_colors.scss" as c;
+@import "style/_breakpoints.scss";
+
+.card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @media (max-width: $lg) {
+    // border: 1px solid red;
+  }
+  .cardHead {
+    display: flex;
+    align-items: center;
+    .icon {
+      height: 24px;
+      width: 24px;
+      margin-right: 10px;
+    }
+    .title {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 30px;
+      color: c.$darkblue;
+      @media (max-width: $lg) {
+        font-size: 16px;
+      }
+    }
+  }
+  .cardFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: $lg) {
+      flex-direction: column;
+      align-items: flex-start;
+      // border: 1px solid red;
+    }
+    .title {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 30px;
+      margin-top: 5px;
+      color: c.$darkblue;
+    }
+    & .btn {
+      // margin-left: 30px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: 0.02em;
+      width: 203px;
+      height: 49px;
+      @media (max-width: $lg) {
+        margin-top: 5px;
+      }
+      & img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  .para {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 140%;
+    color: c.$gray;
+    margin: 20px 0px;
+  }
+}

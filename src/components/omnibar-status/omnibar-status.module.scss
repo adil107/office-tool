@@ -1,0 +1,71 @@
+@use "style/colors.scss" as c;
+
+.cardWrapper {
+  position: relative;
+  z-index: 2000;
+  width: 100%;
+  padding: 12px 30px;
+  .cardContentWrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: relative;
+    @media (max-width: 1550px) {
+      flex-wrap: wrap;
+    }
+    .div {
+      flex: 1;
+      @media (max-width: 1550px) {
+        flex: none;
+      }
+      margin-bottom: 12px;
+      display: flex;
+      flex-direction: column;
+      .p {
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 15px;
+        letter-spacing: 0.02em;
+        padding-right: 5px;
+        color: c.$gray;
+        padding-bottom: 9px;
+      }
+      .contentDiv {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        > p {
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 140%;
+          color: c.$darkblue;
+        }
+        small {
+          font-style: italic;
+          font-weight: normal;
+          font-size: 10px;
+          line-height: 140%;
+          color: c.$gray;
+          margin-top: -4px;
+        }
+        & .dropDown {
+          padding: 0;
+          width: 36px;
+          height: 48px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 14px;
+          margin-left: 12px;
+          cursor: pointer;
+        }
+        .FigureElementsDiv {
+          p {
+            color: c.$white;
+          }
+        }
+      }
+    }
+  }
+}

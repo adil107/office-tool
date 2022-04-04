@@ -1,0 +1,126 @@
+@use "style/_colors.scss" as c;
+
+.wrapper {
+  width: 100%;
+  overflow-x: auto;
+  padding: 0;
+  .cardHeader {
+    padding: 6px 15px;
+    height: 80px;
+    min-width: 1332px;
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: c.$white;
+    box-shadow: 2px 2px 8px rgba(13, 59, 107, 0.2);
+
+    .headerContent {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      border-right: 1px solid c.$lightgray;
+      padding: 0 15px;
+      flex: 1;
+      &:nth-of-type(1) {
+        padding-left: 0;
+      }
+      &:nth-last-of-type(1) {
+        border-right-color: transparent;
+        flex: 1;
+        .statusIconDiv {
+          position: relative;
+          display: flex;
+          p {
+            text-align: center;
+          }
+          .statusImgDiv {
+            flex: 1;
+            text-align: right;
+            padding-right: 7px;
+            & img {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      p {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 140%;
+        letter-spacing: 0.02em;
+        color: c.$darkblue;
+      }
+      small {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 140%;
+        color: c.$darkblue;
+        display: block;
+        margin-top: 3px;
+      }
+    }
+  }
+
+  .cardBody {
+    padding: 6px 15px;
+    height: 87px;
+    min-width: 1332px;
+    display: flex;
+    position: relative;
+    > .bodyContent {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      padding: 0 15px;
+
+      &:nth-of-type(1) {
+        padding-left: 0px;
+      }
+      &:nth-last-of-type(1) {
+        > .statusIconDiv {
+          display: flex;
+          align-items: center;
+          .statusImgDiv {
+            flex: 1;
+            text-align: right;
+            padding-right: 7px;
+          }
+        }
+      }
+      .p {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 140%;
+        color: c.$darkblue;
+      }
+      small {
+        display: inline-block;
+        color: #7e858d;
+        position: relative;
+        margin-top: -3px;
+        font-size: 10px;
+      }
+      span {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 140%;
+        color: c.$darkblue;
+      }
+    }
+  }
+}
+
+.basicAdvancePopup {
+  position: absolute !important;
+  right: -2px;
+  top: 70%;
+}

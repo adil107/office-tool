@@ -1,0 +1,65 @@
+@use "style/colors.scss" as c;
+
+.cardWrapper {
+  padding: 0;
+  // overflow-x: auto;
+  .cardContentWrapper {
+    padding: 12px 30px;
+    // min-width: 950px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    @media (max-width: 1270px) {
+      flex-direction: column;
+      align-items: flex-start;
+      // justify-content: flex-start;
+    }
+    .leftDiv {
+      flex: 1;
+      @media (max-width: 1270px) {
+        flex: none;
+        width: 100%;
+        flex-basis: 0px !important;
+      }
+      .contentDiv {
+        flex: 1;
+        @media (max-width: 1270px) {
+          flex-basis: 0px !important;
+        }
+        small {
+          font-weight: normal;
+          font-size: 10px;
+          line-height: 15px;
+          letter-spacing: 0.02em;
+          color: c.$gray;
+          margin-bottom: 10px;
+          display: inline-block;
+        }
+        p {
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 140%;
+          color: c.$darkblue;
+        }
+      }
+    }
+
+    .btnDiv {
+      display: flex;
+      position: relative;
+      @media (max-width: 1270px) {
+        margin-top: 12px;
+        left: 0;
+      }
+      left: 12px;
+      .btn {
+        letter-spacing: 0.02em;
+        line-height: 21px;
+        padding: 14px 16px;
+        &:nth-of-type(2) {
+          margin-left: 18px;
+        }
+      }
+    }
+  }
+}

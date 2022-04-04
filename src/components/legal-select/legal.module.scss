@@ -1,0 +1,78 @@
+@use "style/_colors.scss" as c;
+
+.wrapper {
+  width: 100%;
+  min-width: 180px;
+  position: relative;
+  .label {
+    margin-bottom: 8px;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    color: c.$gray;
+  }
+  .selectDiv {
+    height: 60px;
+    width: 100%;
+    padding: 6px 18px 6px 23px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid c.$lightgray;
+    border-radius: 14px;
+    .select_p {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 21px;
+      color: c.$darkblue;
+      flex: 1;
+      min-width: 100px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    img {
+      cursor: pointer;
+    }
+  }
+  .dropdownWrapperDiv {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+  }
+}
+
+.card {
+  // max-width: 500px;
+  width: 100%;
+  z-index: 250;
+  position: relative;
+  max-height: 500px;
+  overflow-y: auto;
+
+  .firstFlex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    p {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 140%;
+      letter-spacing: 0.02em;
+      color: #0d3b6b;
+    }
+  }
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    margin-top: 10px;
+    margin-left: 10px;
+    color: #7e858d;
+  }
+}

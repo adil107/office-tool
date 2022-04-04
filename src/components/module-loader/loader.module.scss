@@ -1,0 +1,16 @@
+@use "style/_colors.scss" as c;
+.wrapper {
+  width: 100%;
+  background: transparent;
+  height: calc(100vh - 116px);
+  background: c.$whiteBlue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .loaderStyle {
+    width: 50px;
+    height: 50px;
+    border-color: c.$blue c.$blue transparent;
+    border-width: 3px;
+  }
+}

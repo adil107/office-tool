@@ -1,0 +1,23 @@
+.btn {
+  background-color: #0077ff;
+  color: #fff;
+  border-radius: 50px;
+  padding: 14px;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 14px;
+  border: none;
+  .image {
+    margin-right: 10px;
+    height: 18px;
+    width: 18px;
+  }
+  .loaderClass {
+    width: 24px;
+    height: 24px;
+  }
+}

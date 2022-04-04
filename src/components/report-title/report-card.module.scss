@@ -1,0 +1,46 @@
+@use "style/_colors.scss" as c;
+.card {
+  box-shadow: 2px 2px 8px rgba(13, 59, 107, 0.2);
+  border-radius: 20px;
+  padding: 25px 30px;
+  background-color: c.$white;
+  .reportCard {
+    .mainFlex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h6 {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 27px;
+        color: c.$darkblue;
+      }
+      .arrowIcon {
+        height: 58px;
+        width: 58px;
+      }
+      .flex {
+        display: flex;
+        align-items: center;
+        h5 {
+          font-weight: bold;
+          font-size: 32px;
+          line-height: 48px;
+          color: c.$red;
+        }
+        .helpIcon {
+          height: 22px;
+          width: 22px;
+          margin-left: 10px;
+        }
+      }
+    }
+    p {
+      font-style: italic;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 140%;
+      color: c.$gray;
+    }
+  }
+}

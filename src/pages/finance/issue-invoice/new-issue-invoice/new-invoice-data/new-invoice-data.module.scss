@@ -1,0 +1,65 @@
+@use "style/_colors.scss" as c;
+@import "style/_mixin.scss";
+
+.card {
+  margin-top: 30px;
+  padding: 0px;
+  // max-height: 800px;
+  // height: 100%;
+  .borderPadding {
+    padding: 25px 35px 0px 35px;
+    .firstDiv {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      border-bottom: 2px solid #e5e7e8;
+      padding-bottom: 30px;
+      @media (max-width: 1350px) {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+      .innerFirstDiv {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-bottom: 10px;
+        .invoice {
+          font-size: 12px;
+          line-height: 140%;
+          color: c.$gray;
+          margin-right: 12px;
+        }
+        .days {
+          min-width: 100%;
+          div {
+            & p {
+              min-width: 25px;
+            }
+          }
+        }
+        .year {
+          min-width: 100%;
+          div {
+            // width: 100px;
+            & p {
+              min-width: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.widthAdjust {
+  width: 295px;
+  display: flex;
+}
+.rightDiv {
+  @media (max-width: 1350px) {
+    margin-top: 20px;
+  }
+}
+.marginTopClass {
+  margin-left: 12px;
+}

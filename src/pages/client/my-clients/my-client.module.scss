@@ -1,0 +1,14 @@
+@use "style/_colors.scss" as c;
+
+.headerBar {
+  margin-top: 33px;
+}
+
+.tableWrapper {
+  margin-top: 30px;
+
+  .tableContent {
+    min-height: 250px;
+    max-height: calc(100vh - 261px);
+  }
+}

@@ -1,0 +1,107 @@
+@use "style/_colors.scss" as c;
+
+.wrapper {
+  width: 100%;
+  min-width: 430px;
+  position: relative;
+  .label {
+    margin-bottom: 8px;
+    display: inline-block;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 140%;
+    color: c.$gray;
+  }
+  .selectDiv {
+    width: 100%;
+    padding: 35px 18px;
+    height: 155px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid c.$lightgray;
+    border-radius: 14px;
+    .select_p {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 21px;
+      color: c.$darkblue;
+      flex: 1;
+      min-width: 100px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    img {
+      cursor: pointer;
+    }
+  }
+  .dropdownWrapperDiv {
+    position: absolute;
+    width: 110%;
+    max-height: 412px;
+    overflow-y: auto;
+    top: 100%;
+    left: -5%;
+    z-index: 250;
+    box-shadow: 2px 2px 8px rgba(13, 59, 107, 0.2);
+    border-radius: 20px;
+    background: c.$white;
+    padding: 0px 0px 25px;
+    z-index: 250;
+    .buttonSearchMainDiv {
+      position: sticky;
+      top: 0;
+      background: c.$white;
+      z-index: 260;
+      padding-bottom: 10px;
+      .buttonSearchDiv {
+        display: flex;
+        align-items: center;
+        padding: 25px 0px 20px;
+        border-bottom: 2px solid c.$lightgray;
+        margin: 0px 24px;
+
+        .button {
+          width: 114px;
+          height: 62px;
+          cursor: pointer;
+        }
+        .TextField {
+          height: 60px;
+          flex: 1;
+          margin-left: 15px;
+          & input {
+            height: 60px;
+          }
+        }
+      }
+    }
+
+    .optionClassName {
+      box-shadow: none;
+      border-radius: 0;
+      background: none;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      -ms-border-radius: 0;
+      -o-border-radius: 0;
+      padding: 0px 24px;
+      text-transform: capitalize;
+      height: 275px;
+    }
+  }
+}
+
+.majesto {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  .majestoLabel {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: c.$darkblue;
+  }
+}

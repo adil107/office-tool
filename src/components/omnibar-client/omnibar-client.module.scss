@@ -1,0 +1,42 @@
+@use "style/colors.scss" as c;
+
+.cardWrapper {
+  padding: 0;
+  overflow-x: scroll;
+  width: 100%;
+  .cardContentWrapper {
+    padding: 12px 30px;
+    min-height: 97px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    @media (max-width: 1300px) {
+      padding: 12px 15px;
+    }
+    .div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      flex: 1;
+
+      .p {
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 15px;
+        letter-spacing: 0.02em;
+        padding-right: 5px;
+        color: c.$gray;
+      }
+      .contentDiv {
+        margin-top: 10px;
+        p {
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 140%;
+          color: c.$darkblue;
+        }
+      }
+    }
+  }
+}

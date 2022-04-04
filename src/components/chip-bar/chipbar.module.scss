@@ -1,0 +1,34 @@
+@use "style/colors.scss" as c;
+
+.chipWrapper {
+  background: c.$white;
+  box-shadow: 2px 2px 8px rgba(13, 59, 107, 0.2);
+  border-radius: 14px;
+  width: 128px;
+  padding: 12px 8px 12px 15px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: context-menu;
+
+  .imgDiv {
+    display: flex;
+    align-items: center;
+    img {
+      width: 24px;
+      height: 24px;
+    }
+    .p {
+      color: c.$gray;
+      font-size: 14px;
+      margin-left: 8px;
+    }
+  }
+  .borderDiv {
+    height: 24px;
+    width: 4px;
+    background: c.$blue;
+    border-radius: 44px;
+  }
+}

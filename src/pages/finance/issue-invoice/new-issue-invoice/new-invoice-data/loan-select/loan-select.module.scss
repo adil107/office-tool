@@ -1,0 +1,45 @@
+@use "style/_colors.scss" as c;
+@import "style/_mixin.scss";
+
+.loanDiv {
+  padding-top: 30px;
+  display: flex;
+  align-items: center;
+  .selectWidth {
+    max-width: 435px;
+  }
+  .checkboxLabel {
+    margin-left: 48px;
+  }
+}
+.debtor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  max-width: 65%;
+  .text {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #0d3b6b;
+  }
+}
+.para {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  max-width: 85%;
+  p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #0d3b6b;
+  }
+}
+.img {
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+}

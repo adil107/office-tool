@@ -1,0 +1,14 @@
+export const login = "post/login/";
+export const signup = "post/register/";
+export const add_company = "post/addCompany/";
+export const my_companies = "/post/myCompanies/";
+export const select_company = "/post/selectCompany/";
+export const edit_profile = "/post/editProfile/";
+export const change_password = "/post/changePassword/";
+export const financial_analytics = "/post/financialAnalytics/";
+export const external_company = "/post/externalCompanySearch/";
+export const my_clients = "/post/myClients/";
+export const client_info = "/post/clientInfo/";
+export const search_clients = "/post/searchMyClients/";
+export const request_support = "/post/requestSupport/";
+// export const user = (id) => `users/${id}`;

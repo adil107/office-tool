@@ -1,0 +1,16 @@
+@use "style/_colors.scss" as c;
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 47px;
+  width: 49px;
+  box-shadow: 2px 2px 8px rgba(13, 59, 107, 0.2);
+  border-radius: 10px;
+  & p {
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff !important;
+  }
+}

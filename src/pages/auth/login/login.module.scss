@@ -1,0 +1,62 @@
+@use "style/_colors.scss" as c;
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  .main {
+    width: 500px;
+    .img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 200px;
+        height: 47px;
+      }
+    }
+    .card {
+      margin-top: 45px;
+      padding: 30px 80px;
+      p {
+        font-size: 20px;
+        line-height: 30px;
+        text-align: center;
+        font-weight: bold;
+        color: c.$darkblue;
+        margin-bottom: 10px;
+      }
+      .textField {
+        margin-top: 15px;
+      }
+      .account {
+        font-size: 12px;
+        line-height: 140%;
+        font-weight: 300;
+        text-align: center;
+        margin-top: 40px;
+        color: c.$gray;
+      }
+      .create {
+        font-weight: normal;
+        font-size: 12px;
+        text-align: center;
+        margin-top: 0px;
+        line-height: 1px;
+        color: c.$blue;
+      }
+      .flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 60px;
+        .btn {
+          width: 160px;
+          height: 52px;
+        }
+      }
+    }
+  }
+}

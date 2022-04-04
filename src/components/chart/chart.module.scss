@@ -1,0 +1,41 @@
+@use "style/_colors.scss" as c;
+
+.card {
+  padding: 30px;
+  h5 {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 27px;
+    color: c.$darkblue;
+  }
+
+  .main {
+    margin: 25px 0px;
+    display: flex;
+    .flex {
+      display: flex;
+      margin-right: 50px;
+      align-items: center;
+      img {
+        height: 51px;
+        width: 51px;
+      }
+      .inner {
+        margin-left: 25px;
+        p {
+          font-size: 14px;
+          line-height: 140%;
+          letter-spacing: 0.02em;
+          color: c.$gray;
+        }
+        h6 {
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 30px;
+          color: c.$darkblue;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+}

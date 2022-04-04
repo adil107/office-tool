@@ -1,0 +1,104 @@
+@use "style/_colors.scss" as c;
+@import "style/_mixin.scss";
+
+// Add Client Modal
+
+.addCompanyModal {
+  .modal {
+    max-width: 523px !important;
+    padding: 25px 56px !important;
+  }
+  .headerDiv {
+    padding: 0 0px 25px 44px;
+    border-bottom: 2px solid c.$lightgray;
+    .modalTitle {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 30px;
+      color: c.$darkblue;
+    }
+    .selectDiv {
+      max-width: 321px;
+      margin-top: 30px;
+    }
+    .textFieldDiv {
+      display: flex;
+      align-items: flex-end;
+      margin-top: 25px;
+
+      .p {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 140%;
+        color: c.$gray;
+        margin-left: 22px;
+      }
+      .textField {
+        max-width: 194px;
+        width: 100%;
+        input {
+          height: 60px;
+        }
+      }
+      .btn1 {
+        margin-left: 20px;
+        height: 53px;
+        margin-bottom: 3.5px;
+      }
+    }
+  }
+
+  .modalBodyDiv {
+    padding: 20px 0px 10px 63px;
+
+    h1 {
+      font-weight: 700;
+      font-size: 18px;
+      color: c.$darkblue;
+      line-height: 27px;
+    }
+    p {
+      font-size: 18px;
+      color: c.$darkblue;
+      line-height: 27px;
+    }
+  }
+  .modalFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 20px 10px;
+    .btn2 {
+      height: 53px;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      margin-right: 20px;
+      line-height: 21px;
+      letter-spacing: 0.02em;
+    }
+    .modalBtn {
+      background-color: c.$lightgray;
+      color: c.$gray;
+      margin-left: 15px;
+      padding: 16px;
+      height: 53px;
+    }
+  }
+}
+
+.fieldStyle {
+  margin-top: 20px;
+  max-width: 321px;
+  & div {
+    height: 60px;
+  }
+}
+
+.widthClass {
+  width: 150px;
+}
+
+.fieldStyle1 {
+  max-width: 321px;
+}

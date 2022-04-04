@@ -1,0 +1,100 @@
+@use "style/_colors.scss" as c;
+@import "style/_mixin.scss";
+
+.card {
+  position: relative;
+  z-index: 5;
+  margin-top: 30px;
+  width: 100%;
+  padding: 0px;
+  min-height: 171px;
+  .lastChange {
+    display: flex;
+    padding: 20px 25px;
+    .leftDiv {
+      flex-basis: 475px;
+      flex: 1;
+      border-right: 1px solid #e5e7e8;
+      @include gridTwo(20, 20);
+      @media (max-width: 1750px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      .checkChange {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+        color: c.$darkblue;
+        letter-spacing: 0.5px;
+      }
+      .myClientArrow {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 67%;
+        margin-top: 20px;
+        p {
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 140%;
+          color: c.$gray;
+        }
+      }
+      .flex {
+        display: flex;
+        align-items: center;
+        // margin-top: 12px;
+        .helpImg {
+          height: 22px;
+          width: 22px;
+          margin-left: 70px;
+        }
+      }
+      .li {
+        margin-top: 16px;
+        margin-left: 25px;
+        li {
+          font-weight: 400;
+          font-size: 16px;
+          list-style: disc;
+          margin-top: 5px;
+          line-height: 140%;
+          color: c.$gray;
+          &::marker {
+            color: c.$blue;
+          }
+        }
+      }
+    }
+    .rightDiv {
+      flex: 1;
+      @include gridFour(15, 15);
+      @media (max-width: 1560px) {
+        @include gridThree(15, 15);
+      }
+      @media (max-width: 1350px) {
+        @include gridTwo(15, 15);
+      }
+      min-height: 110px;
+
+      padding: 0px 20px 0px 30px;
+      .btn {
+        width: 159px;
+        height: 48px;
+        background-color: #cce4ff;
+        color: #0077ff;
+        line-height: 21px;
+        letter-spacing: 0.02em;
+        &:hover {
+          background: #a6c2e1;
+        }
+      }
+    }
+  }
+}
+
+.companyTitle {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  color: c.$darkblue;
+}

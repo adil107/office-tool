@@ -1,0 +1,66 @@
+@use "style/_colors.scss" as c;
+
+.wrapper {
+  width: 100%;
+  overflow-x: auto;
+  padding: 0;
+  .cardHeader {
+    padding: 6px 15px;
+    height: 66px;
+    min-width: 1292px;
+    display: flex;
+    position: relative;
+    background: linear-gradient(
+      rgba(126, 133, 141, 0.3),
+      rgba(126, 133, 141, 0.3)
+    );
+    .headerContent {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding: 0 15px;
+      flex: 1;
+      &:nth-of-type(1) {
+        padding-left: 0;
+      }
+
+      .p {
+        width: 100%;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: c.$gray;
+      }
+    }
+  }
+
+  .cardBody {
+    padding: 10px 15px;
+    min-width: 1292px;
+    display: flex;
+    position: relative;
+    > .bodyContent {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      padding: 0 15px;
+
+      &:nth-of-type(1) {
+        padding-left: 0px;
+      }
+      &:nth-last-of-type(1) {
+        padding-right: 0px;
+      }
+
+      .p {
+        width: 100%;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 27px;
+        color: c.$darkblue;
+      }
+    }
+  }
+}

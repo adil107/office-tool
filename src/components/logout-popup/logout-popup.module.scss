@@ -1,0 +1,44 @@
+@use "style/_colors.scss" as c;
+
+.logoutModal {
+  max-width: 523px !important;
+  width: 100%;
+  padding: 25px 15px 35px !important;
+  height: 209px !important;
+  display: flex;
+  align-items: center;
+
+  .contentWrapper {
+    max-width: 334px;
+    width: 100%;
+    margin: auto;
+    padding: 0 10px;
+
+    .title {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 140%;
+      text-align: center;
+      color: c.$darkblue;
+    }
+
+    .btnDiv {
+      margin-top: 35px;
+      display: flex;
+      justify-content: center;
+      .btn1 {
+        width: 159px;
+        height: 52px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0.02em;
+        &:nth-of-type(2) {
+          background: c.$lightgray;
+          color: c.$gray;
+          margin-left: 14px;
+        }
+      }
+    }
+  }
+}

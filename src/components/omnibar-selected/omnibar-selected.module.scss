@@ -1,0 +1,48 @@
+@use "style/_colors.scss" as c;
+
+.cardWrapper {
+  padding: 0;
+  overflow-x: scroll;
+  width: 100%;
+
+  .contentWrapper {
+    min-width: 800px;
+    padding: 7px 15px;
+    height: 82px;
+    display: flex;
+    align-items: center;
+    .contentDiv {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+    .btnTextDiv {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .btnDiv {
+        height: 100%;
+        border-left: 1px solid c.$lightgray;
+        display: flex;
+        margin-left: 15px;
+        align-items: center;
+        .btn {
+          margin: 0 8px;
+          background-color: #cce4ff !important;
+          color: c.$blue;
+          font-size: 14px;
+          line-height: 21px;
+          letter-spacing: 0.02em;
+        }
+      }
+      p {
+        margin-right: 15px;
+        color: c.$darkblue;
+        font-size: 14px;
+        line-height: 140%;
+        letter-spacing: 0.02em;
+      }
+    }
+  }
+}

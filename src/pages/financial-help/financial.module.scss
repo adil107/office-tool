@@ -1,0 +1,39 @@
+@use "style/_colors.scss" as c;
+@import "style/_mixin.scss";
+.main {
+  height: calc(100vh - 40px);
+  overflow-y: auto;
+  .legal {
+    padding-bottom: 50px;
+    .p {
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 27px;
+      color: c.$darkblue;
+      position: sticky;
+      top: 76px;
+      background-color: #f3f7fd;
+      padding: 30px 0px 50px 0px;
+      // width: 100%;
+    }
+    .firstDiv {
+      padding-left: 5px;
+      padding-right: 8px;
+    }
+    .grid1 {
+      @include gridThree(20, 25);
+    }
+
+    .h6 {
+      color: c.$darkblue;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 30px;
+      margin-bottom: 20px;
+      margin-top: 50px;
+      &:nth-of-type(1) {
+        margin-top: 0px;
+      }
+    }
+  }
+}

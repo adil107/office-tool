@@ -1,0 +1,105 @@
+@use "style/_colors.scss" as c;
+
+.wrapper {
+  width: 68px;
+  height: 68px;
+  background: c.$white;
+  box-shadow: 2px 2px 8px rgba(13, 59, 107, 0.2);
+  border-radius: 14px;
+  z-index: 2000;
+  padding: 8px 4px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  transition: all 0.09s linear;
+  -webkit-transition: all 0.09s linear;
+  -moz-transition: all 0.09s linear;
+  -ms-transition: all 0.09s linear;
+  -o-transition: all 0.09s linear;
+  z-index: 2;
+  cursor: context-menu;
+
+  &:hover {
+    background: rgba(13, 59, 107, 0.2);
+    z-index: 2000;
+
+    .tooltipWrapper {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  & .imgDiv {
+    text-align: center;
+    > img {
+      width: 32px;
+      height: 32px;
+    }
+  }
+  & .tittleDiv {
+    > p {
+      font-weight: 600;
+      font-size: 10px;
+      line-height: 15px;
+      text-align: center;
+      color: c.$gray;
+      letter-spacing: 0.02em;
+    }
+  }
+  & .tooltipWrapper {
+    top: 115%;
+    position: absolute;
+    width: 176px;
+    border-radius: 14px;
+    text-align: center;
+    background: c.$darkblue;
+    padding: 10px 12px;
+    opacity: 0;
+    color: c.$white;
+    display: flex;
+    visibility: hidden;
+    flex-direction: column;
+    align-items: center;
+
+    .tooltipTittle {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 21px;
+      text-align: center;
+      letter-spacing: 0.02em;
+    }
+
+    .tooltipBody {
+      margin-top: 2px;
+      font-size: 12px;
+      line-height: 140%;
+      font-weight: normal;
+      line-height: 18px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 30px;
+      height: 30px;
+      top: -2px;
+      background: c.$darkblue;
+      border-radius: 2px;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      z-index: 1;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+    }
+    transition: all 0.09s linear;
+    -webkit-transition: all 0.09s linear;
+    -moz-transition: all 0.09s linear;
+    -ms-transition: all 0.09s linear;
+    -o-transition: all 0.09s linear;
+  }
+}

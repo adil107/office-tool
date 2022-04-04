@@ -1,0 +1,178 @@
+@use "style/_colors.scss" as c;
+
+.basicInfoCard {
+  margin-top: 30px;
+  padding: 30px;
+  height: calc(100vh - 243px);
+  overflow-y: auto;
+}
+
+.basicInfoWrapper {
+  .title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: c.$darkblue;
+    margin-bottom: 30px;
+  }
+  .flex {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    .datePicker {
+      max-width: 350px;
+    }
+    .textField {
+      max-width: 350px;
+      margin-left: 25px;
+      & input {
+        height: 60px;
+      }
+    }
+    .textFieldAgreement {
+      max-width: 350px;
+      & input {
+        height: 60px;
+      }
+    }
+    .selectSearch {
+      max-width: 350px;
+      margin-left: 25px;
+    }
+  }
+}
+
+// Add Client Modal
+
+.addCompanyModal {
+  .modal {
+    max-width: 523px !important;
+    padding: 25px 56px !important;
+  }
+  .headerDiv {
+    padding: 0 0px 25px 44px;
+    border-bottom: 2px solid c.$lightgray;
+    .modalTitle {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 30px;
+      color: c.$darkblue;
+    }
+    .selectDiv {
+      max-width: 321px;
+      margin-top: 30px;
+    }
+    .textFieldDiv {
+      display: flex;
+      align-items: flex-end;
+      margin-top: 25px;
+
+      .p {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 140%;
+        color: c.$gray;
+        margin-left: 22px;
+      }
+      .textField {
+        max-width: 194px;
+        width: 100%;
+        input {
+          height: 60px;
+        }
+      }
+      .btn1 {
+        margin-left: 10px;
+        height: 53px;
+        margin-bottom: 3.5px;
+      }
+    }
+  }
+
+  .modalBodyDiv {
+    padding: 20px 0px 10px 63px;
+
+    h1 {
+      font-weight: 700;
+      font-size: 18px;
+      color: c.$darkblue;
+      line-height: 27px;
+    }
+    p {
+      font-size: 18px;
+      color: c.$darkblue;
+      line-height: 27px;
+    }
+  }
+  .modalFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 20px 10px;
+    .btn2 {
+      height: 53px;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: 0.02em;
+    }
+    .modalBtn {
+      background-color: c.$lightgray;
+      color: c.$gray;
+      margin-left: 15px;
+      padding: 16px;
+      height: 53px;
+    }
+  }
+}
+
+// omnibar Contract Modal
+
+.OmnibarModal {
+  max-width: 523px !important;
+  width: 100%;
+  padding: 25px 15px 35px !important;
+  .contentWrapper {
+    max-width: 350px;
+    width: 100%;
+    margin: auto;
+
+    .title {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 30px;
+      color: c.$darkblue;
+      text-align: center;
+    }
+
+    .inputFieldDiv {
+      margin: 45px 5px 35px;
+      .inputField {
+        & input {
+          height: 60px;
+        }
+      }
+    }
+
+    .btnDiv {
+      display: flex;
+      justify-content: center;
+      .btn1 {
+        width: 159px;
+        height: 52px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0.02em;
+        &:nth-of-type(2) {
+          background: c.$lightgray;
+          color: c.$gray;
+          margin-left: 14px;
+        }
+      }
+    }
+  }
+}

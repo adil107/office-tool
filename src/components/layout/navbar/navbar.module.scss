@@ -1,0 +1,94 @@
+@use "style/_colors.scss" as c;
+
+.navbar {
+  position: sticky;
+  background: #f3f7fd;
+  padding-bottom: 20px;
+  top: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+  .flex {
+    display: flex;
+    align-items: center;
+    position: relative;
+    h5 {
+      font-weight: bold;
+      font-size: 32px;
+      color: #0d3b6b;
+      @media (max-width: 1200px) {
+        font-size: 25px;
+      }
+    }
+    .userName {
+      font-weight: bold;
+      font-size: 18px;
+      color: #0d3b6b;
+      max-width: 200px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .p {
+      font-weight: normal;
+      font-size: 14px;
+      text-align: right;
+      color: #717579;
+    }
+    .small {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      display: block;
+      letter-spacing: 0.02em;
+      color: c.$gray;
+      margin-top: 14px;
+      margin-left: 12px;
+    }
+    .arrowIcon {
+      margin-left: 14px;
+      height: 44px;
+      width: 44px;
+    }
+    .profileIcon {
+      margin: 0px 15px;
+    }
+    .dropDown {
+      position: absolute;
+      top: 110%;
+      max-width: 200px;
+      width: 100%;
+    }
+  }
+  .flex1 {
+    display: flex;
+    align-items: center;
+    .bellIconDiv {
+      position: relative;
+      margin: 0 40px;
+      .bellNotification {
+        position: absolute;
+        width: 21px;
+        height: 21px;
+        top: -9px;
+        right: -5px;
+        background-color: #0077ff;
+        display: flex;
+        justify-content: center;
+        border-radius: 50%;
+        align-items: center;
+        p {
+          font-size: 12px;
+          color: #ffffff;
+        }
+      }
+    }
+    .btn {
+      padding: 14px 15px;
+    }
+    .arrowDown {
+      cursor: pointer;
+    }
+  }
+}

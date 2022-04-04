@@ -1,0 +1,129 @@
+@use "style/_colors.scss" as *;
+
+.sidebarCard {
+  height: calc(100vh - 40px);
+  overflow-y: auto;
+  padding-left: 25px;
+  padding-right: 0px;
+  position: relative;
+
+  .titleDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 25px;
+    margin-top: 38px;
+    position: relative;
+
+    h1 {
+      font-size: 18px;
+      line-height: 27px;
+      color: $darkblue;
+      max-width: 205px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      display: inline-block;
+    }
+    .roundArrowImgDiv {
+      display: flex;
+      align-items: center;
+      > img {
+        cursor: pointer;
+      }
+    }
+    .dropDown {
+      position: absolute;
+      top: 38px;
+      left: 0px;
+      max-width: 200px;
+      width: 100%;
+    }
+  }
+
+  .sideUl1 {
+    margin-top: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: calc(100vh - 180px);
+    & li {
+      position: relative;
+      > div {
+        display: flex;
+        align-items: center;
+        padding: 15px 0;
+        cursor: pointer;
+        img {
+          width: 22px;
+        }
+        p {
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 27px;
+          margin-left: 26px;
+          display: flex;
+          align-items: center;
+          color: $gray;
+        }
+        .financeRoundImgDiv {
+          display: flex;
+          align-items: center;
+          flex: 1;
+          padding-right: 25px;
+          justify-content: flex-end;
+          img {
+            width: 24px;
+          }
+        }
+        &:hover {
+          p {
+            font-weight: 700;
+          }
+        }
+      }
+
+      .financeUl2 {
+        li {
+          position: relative;
+          padding-left: 26px;
+        }
+      }
+    }
+
+    & .bignestLogo {
+      margin-right: 25px;
+      display: flex;
+      justify-content: center;
+      img {
+        width: 100px;
+      }
+    }
+  }
+}
+
+.active {
+  > div {
+    p {
+      color: $blue !important;
+      font-weight: bold !important;
+    }
+    &:hover {
+      p {
+        color: $blue !important;
+      }
+    }
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    top: 0;
+    bottom: 0;
+    background: $blue;
+    right: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+}

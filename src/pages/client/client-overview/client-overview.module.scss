@@ -1,0 +1,123 @@
+@use "style/_colors.scss" as c;
+@import "style/_mixin.scss";
+
+.OldNewStatus {
+  margin-top: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+// lastChange
+.card {
+  position: relative;
+  z-index: 5;
+  margin-top: 30px;
+  width: 100%;
+  padding: 0px;
+  min-height: 171px;
+  .lastChange {
+    display: flex;
+    padding: 20px 25px;
+    .leftDiv {
+      flex-basis: 475px;
+      flex: 1;
+      border-right: 1px solid #e5e7e8;
+      .flex {
+        display: flex;
+        align-items: center;
+        // margin-top: 12px;
+        .helpImg {
+          height: 22px;
+          width: 22px;
+          margin-left: 70px;
+        }
+      }
+      .lastChangeArr {
+        margin-top: 26px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        .clientTooltip {
+          margin-right: 17px;
+          &:nth-of-type(1) {
+            & .tooltipClass {
+              left: -24px !important;
+              &::before {
+                margin-right: 60px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .rightDiv {
+      flex: 1;
+      @include gridFour(15, 15);
+      @media (max-width: 1560px) {
+        @include gridThree(15, 15);
+      }
+      @media (max-width: 1350px) {
+        @include gridTwo(15, 15);
+      }
+      min-height: 110px;
+
+      padding: 0px 20px 0px 30px;
+      .btn {
+        width: 155px;
+        height: 48px;
+        background-color: #cce4ff;
+        color: #0077ff;
+        line-height: 21px;
+        letter-spacing: 0.02em;
+        &:hover {
+          background: #a6c2e1;
+        }
+      }
+    }
+  }
+}
+
+// companyInfo
+
+.cardInfo {
+  margin-top: 30px;
+  width: 100%;
+  padding: 0px;
+  overflow-x: auto;
+  .companyInfo {
+    padding: 15px 25px;
+    min-width: 1132px;
+
+    .grid {
+      @include gridThree(20, 20);
+      margin-top: 12px;
+      .title {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        flex: 1;
+        color: c.$darkblue;
+      }
+
+      .secondDiv {
+        .secondFlex {
+          display: flex;
+          align-items: center;
+          .secondTitle {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 140%;
+            color: c.$gray;
+            width: 105px;
+          }
+        }
+      }
+    }
+  }
+}
+.companyTitle {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  color: c.$darkblue;
+}
