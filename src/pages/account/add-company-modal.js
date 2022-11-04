@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import { useDispatch, useSelector } from "react-redux";
 
 import Modal from "components/modal";
 import TextField from "components/text-field";
 import Button from "components/button";
 import axios from "utils/axios";
-import { useDispatch, useSelector } from "react-redux";
+import { fetchMyCompany } from "redux/actions";
+import { createNotification } from "common/create-notification";
 import { add_company, external_company } from "utils/endpoints";
 
 import style from "./account.module.scss";
-import { createNotification } from "common/create-notification";
-import { fetchMyCompany } from "redux/actions";
 
 const AddCompanyModal = ({ open, setOpen }) => {
   const [companySearchResult, setCompanySearchResult] = useState({});

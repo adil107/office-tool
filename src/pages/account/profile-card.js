@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { useDispatch, useSelector } from "react-redux";
 import * as yup from "yup";
 
 import Card from "components/card";
@@ -10,7 +11,6 @@ import ChangePassword from "./change-password-modal";
 import { createNotification } from "common/create-notification";
 import axios from "utils/axios";
 import { edit_profile } from "utils/endpoints";
-import { useDispatch, useSelector } from "react-redux";
 import { updateUserProfile } from "redux/actions";
 
 import style from "./account.module.scss";
@@ -62,7 +62,7 @@ const ProfileCard = () => {
   };
 
   useEffect(() => {
-    if (Object.keys(userData?.userInfo)?.length > 0) {
+    if (userData?.userInfo) {
       reset({ ...userData?.userInfo });
     }
   }, [userData, reset]);

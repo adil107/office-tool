@@ -22,7 +22,6 @@ const Omnibar = ({
 }) => {
   const [open, setOpen] = useState(false);
   const {
-    tableData,
     handleNext,
     handlePrevious,
     indexOfFirstPost,

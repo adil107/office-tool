@@ -16,7 +16,7 @@ const App = () => {
   }, [token, dispatch]);
   return (
     <>
-      <Routing isLogin={token} />
+      <Routing isLogin={true} />
       <NotificationContainer />
     </>
   );
