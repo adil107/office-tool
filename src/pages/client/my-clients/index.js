@@ -1,22 +1,19 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 import { Navbar } from "components/layout/navbar";
 import Omnibar from "components/omnibar";
-
 import OmnibarSelected from "components/omnibar-selected";
 import MyClientTable from "./my-client-table";
 import ModuleContext from "finance-client-context";
-import axios from "utils/axios";
+import ModuleLoader from "components/module-loader";
 import { my_clients, search_clients } from "utils/endpoints";
-import { useSelector } from "react-redux";
 import { convertArr } from "utils/helper";
+import axios from "utils/axios";
+import { btnList, tabsList } from "./helper";
 
 import style from "./my-client.module.scss";
-import hideIcon from "assets/icons/hide-icon-blue.svg";
-import eyeBlue from "assets/icons/hide-icon-blue.svg";
-import deleteIcon from "assets/icons/delete-icon-blue.svg";
-import ModuleLoader from "components/module-loader";
 
 const MyClient = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -93,10 +90,3 @@ const MyClient = () => {
 };
 
 export default MyClient;
-
-const tabsList = ["All invoices", "Blocks", "Danger", "Liquidation", "Hidden"];
-const btnList = [
-  { text: "Hide client", icon: hideIcon },
-  { text: "Unhide client", icon: eyeBlue },
-  { text: "Delete  client", icon: deleteIcon },
-];

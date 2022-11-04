@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
 import md5 from "md5";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -10,10 +9,11 @@ import TextField from "components/text-field";
 import Button from "components/button";
 import { signup } from "utils/endpoints";
 import axios from "utils/axios";
+import { signUpSchema } from "./helper";
+import { createNotification } from "common/create-notification";
 
 import style from "./signUp.module.scss";
 import logo from "assets/images/logo.svg";
-import { createNotification } from "common/create-notification";
 
 const SignUp = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -137,25 +137,3 @@ const SignUp = () => {
 };
 
 export default SignUp;
-
-const signUpSchema = yup.object().shape({
-  firstName: yup
-    .string()
-    .required("First Name is required")
-    .min(3, "Minimum 3 characters are required"),
-  lastName: yup
-    .string()
-    .required("Last Name is required")
-    .min(3, "Minimum 3 characters are required"),
-  email: yup
-    .string()
-    .required("Email is required")
-    .email("invalid email address"),
-  password: yup
-    .string()
-    .required("Password is required")
-    .min(8, "Password must be at least 8 characters"),
-  repeatPassword: yup
-    .string()
-    .oneOf([yup.ref("password"), null], "Repeat Password must match"),
-});

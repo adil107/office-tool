@@ -6,6 +6,7 @@ import TextField from "components/text-field";
 import style from "./new_document.module.scss";
 import Button from "components/button";
 import Select from "components/select";
+import { optionList } from "./helper";
 
 const AddClientModal = ({ open, setOpen }) => {
   const [selectOpen, setSelectOpen] = useState(false);
@@ -77,9 +78,3 @@ const AddClientModal = ({ open, setOpen }) => {
 };
 
 export default AddClientModal;
-
-const optionList = [
-  { shortName: "Pravna oseba" },
-  { shortName: "Stranka 1" },
-  { shortName: "Stranka 2" },
-];

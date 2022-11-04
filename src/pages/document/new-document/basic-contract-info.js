@@ -5,6 +5,7 @@ import DatePicker from "components/date-picker";
 import SelectWithSearch from "components/select-width-search";
 import TextField from "components/text-field";
 import AddClientModal from "./add-client-modal";
+import { firstContractList, secondContractList } from "./helper";
 
 import style from "./new_document.module.scss";
 
@@ -120,35 +121,3 @@ const BasicInfoContract = () => {
 };
 
 export default BasicInfoContract;
-
-const firstContractList = [
-  { shortName: "Bignest Kilring d.o.o" },
-
-  { shortName: "Stranka 1" },
-  { shortName: "Stranka 2" },
-  { shortName: "Stranka 3" },
-  { shortName: "Stranka 4" },
-  { shortName: "Stranka 5" },
-  { shortName: "Stranka 6" },
-  { shortName: "Stranka 7" },
-  { shortName: "Stranka 8" },
-  { shortName: "Stranka 9" },
-  { shortName: "Stranka 10" },
-  { shortName: "Stranka 11" },
-];
-
-const secondContractList = [
-  { shortName: "Petrol d.d." },
-
-  { shortName: "Stranka 1" },
-  { shortName: "Stranka 2" },
-  { shortName: "Stranka 3" },
-  { shortName: "Stranka 4" },
-  { shortName: "Stranka 5" },
-  { shortName: "Stranka 6" },
-  { shortName: "Stranka 7" },
-  { shortName: "Stranka 8" },
-  { shortName: "Stranka 9" },
-  { shortName: "Stranka 10" },
-  { shortName: "Stranka 11" },
-];

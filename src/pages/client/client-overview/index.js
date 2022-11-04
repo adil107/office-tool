@@ -12,6 +12,7 @@ import { client_info } from "utils/endpoints";
 
 import style from "./client-overview.module.scss";
 import ModuleLoader from "components/module-loader";
+import { rows } from "./helper";
 
 const ClientOverview = () => {
   const [clientData, setClientData] = useState({});
@@ -70,42 +71,3 @@ const ClientOverview = () => {
 };
 
 export default ClientOverview;
-
-const rows = [
-  {
-    status: true,
-    name: "Name",
-    oldStatus: "DM Transport Milorad Tomić s.p.",
-    newStatus: "DS Transport Milorad Tomić s.p.",
-  },
-  {
-    status: false,
-    name: "Address",
-    oldStatus: "Slatna 10, Šmartno pri Litiji, 1275 Šmartno pri Litiji",
-    newStatus: "Ni spremembe",
-  },
-  {
-    status: false,
-    name: "Founders",
-    oldStatus: "Milorad Tomić",
-    newStatus: "Ni spremembe",
-  },
-  {
-    status: false,
-    name: "Representatives",
-    oldStatus: "Milorad Tomić",
-    newStatus: "Ni spremembe",
-  },
-  {
-    status: true,
-    name: "Stevilo odprith raconov",
-    oldStatus: "DA",
-    newStatus: "NE",
-  },
-  {
-    status: false,
-    name: "Stevilo zaprtih raconov",
-    oldStatus: "NE Podatka",
-    newStatus: "Ni spremembe",
-  },
-];

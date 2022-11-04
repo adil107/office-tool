@@ -6,6 +6,7 @@ import ClientHoverTooltip from "components/client-hover-tooltip";
 import style from "./client-overview.module.scss";
 import help from "assets/legal_financial/help-client.svg";
 import Button from "components/button";
+import { btnList, toolTip } from "./helper";
 
 const ClientLastChange = () => {
   return (
@@ -44,28 +45,3 @@ const ClientLastChange = () => {
 };
 
 export default ClientLastChange;
-const toolTip = [
-  {
-    title: "Liquidation",
-  },
-  {
-    title: "Neplačnik",
-  },
-  {
-    title: "Nov lastnik",
-  },
-  {
-    title: "Davki",
-  },
-];
-
-const btnList = [
-  { title: "Možnost kompenzcije" },
-  { title: "Prijava terjatve v stečaju" },
-  { title: "Prijava terjatve  v stečaju" },
-  { title: "Možnost kompenzcije" },
-  { title: "Vložitev ivršbe" },
-  { title: "Analiza situacije - pokliči Žigo" },
-  { title: "Analiza situacije - pokliči Žigo" },
-  { title: "Vložitev ivršbe" },
-];

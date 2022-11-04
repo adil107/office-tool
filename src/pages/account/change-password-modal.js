@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
 import md5 from "md5";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -11,11 +10,12 @@ import TextField from "components/text-field";
 import axios from "utils/axios";
 import { change_password } from "utils/endpoints";
 import { createNotification } from "common/create-notification";
+import { UPDATE_TOKEN } from "redux/constants";
+import { updatePasswordSchema } from "./helper";
 
 import eye from "assets/legal_financial/eye.svg";
 import eyeBlue from "assets/legal_financial/eye-blue.svg";
 import style from "./account.module.scss";
-import { UPDATE_TOKEN } from "redux/constants";
 
 const ChangePassword = ({ open, setOpen }) => {
   const [hideShowPassword, setHideShowPassword] = useState({
@@ -139,17 +139,3 @@ const ChangePassword = ({ open, setOpen }) => {
 };
 
 export default ChangePassword;
-
-const updatePasswordSchema = yup.object().shape({
-  oldPassword: yup
-    .string()
-    .required("Old Password is required")
-    .min(8, "Old  Password must be at least 8 characters"),
-  newPassword: yup
-    .string()
-    .required("New Password is required")
-    .min(8, "New Password must be at least 8 characters"),
-  confirmNewPassword: yup
-    .string()
-    .oneOf([yup.ref("newPassword"), null], "Repeat New Password must match"),
-});

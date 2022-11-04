@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
 import { useDispatch } from "react-redux";
 import md5 from "md5";
 
@@ -14,6 +13,7 @@ import { login } from "utils/endpoints";
 import { createNotification } from "common/create-notification";
 import { authAction } from "redux/actions";
 import removeKey from "utils/helper";
+import { loginSchema } from "./helper";
 
 import style from "./login.module.scss";
 import logo from "assets/images/logo.svg";
@@ -117,14 +117,3 @@ const Login = () => {
 };
 
 export default Login;
-
-const loginSchema = yup.object().shape({
-  email: yup
-    .string()
-    .required("Email is required")
-    .email("Invalid email address"),
-  password: yup
-    .string()
-    .required("Password is required")
-    .min(8, "Password must be at least 8 characters"),
-});
